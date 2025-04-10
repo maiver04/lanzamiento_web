@@ -1,0 +1,297 @@
+
+/* CSS para carrusel compacto */
+#carouselSmartwatch {
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.carousel-inner {
+    border-radius: 15px;
+}
+
+.carousel-item {
+    height: 400px; /* Altura reducida */
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item img {
+    height: 20%;
+    width: 20%;
+    object-fit: cover;
+    object-position: center 30%;
+}
+
+/* Controles personalizados */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 20px;
+    height: 20px;
+    background: rgba(0,0,0,0.2);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background: rgba(0,0,0,0.5);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: brightness(0) invert(1);
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+/* Indicadores personalizados */
+.carousel-indicators [data-bs-target] {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.5);
+    border: none;
+    margin: 0 5px;
+}
+
+.carousel-indicators .active {
+    background-color: #ffffff;
+    transform: scale(1.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .carousel-item {
+        height: 300px;
+    }
+    
+    #carouselSmartwatch {
+        max-width: 95%;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-item {
+        height: 250px;
+    }
+}
+
+
+
+/* styles.css */
+:root {
+    --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --gradient-secondary: linear-gradient(to right, #ff6b6b, #ff8e53);
+    --text-dark: #2d3436;
+    --text-light: #f8f9fa;
+    --accent-color: #ffeaa7;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-dark);
+    background: #f8f9fa;
+}
+
+/* Navbar con gradiente */
+.navbar {
+    background: var(--gradient-primary) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    color: var(--text-light) !important;
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.8) !important;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: var(--accent-color) !important;
+    transform: translateY(-2px);
+}
+
+/* Hero Section mejorado */
+.hero-section {
+    background: var(--gradient-primary), 
+                url('https://images.unsplash.com/photo-1550684848-fac1c5b4e853?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
+    padding: 140px 0 100px;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    margin-top: 76px;
+}
+
+.hero-section h1 {
+    font-size: 3.2rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    color: var(--text-light);
+    letter-spacing: -0.5px;
+}
+
+.hero-section .lead {
+    font-size: 1.4rem;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 600px;
+    margin: 1.5rem auto;
+}
+
+/* Carrusel compacto y estilizado */
+#carouselSmartwatch {
+    max-width: 800px;
+    margin: 2rem auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.carousel-item {
+    height: 350px; /* Altura reducida */
+    position: relative;
+}
+
+.carousel-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+    filter: brightness(0.95);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 45px;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    backdrop-filter: blur(4px);
+    transition: all 0.3s ease;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    border: none;
+    margin: 0 6px;
+}
+
+.carousel-indicators .active {
+    background: var(--accent-color);
+    transform: scale(1.3);
+}
+
+/* Sección de características con fondo degradado */
+#features {
+    background: var(--gradient-secondary);
+    padding: 5rem 0;
+    color: var(--text-light);
+}
+
+.card {
+    border: none;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    min-height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.card i {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+}
+
+/* Testimonios con diseño moderno */
+#testimonios {
+    background: #fff;
+    padding: 5rem 0;
+}
+
+.blockquote {
+    background: var(--gradient-primary);
+    color: white;
+    border-radius: 15px;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.blockquote::before {
+    content: "“";
+    position: absolute;
+    font-size: 8rem;
+    opacity: 0.15;
+    top: -2rem;
+    left: -1rem;
+    color: var(--accent-color);
+}
+
+/* Formulario de contacto */
+#contacto {
+    background: #f8f9fa;
+    padding: 5rem 0;
+}
+
+.form-control {
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(255, 234, 167, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.2rem;
+    }
+    
+    .carousel-item {
+        height: 250px;
+    }
+    
+    .card {
+        margin-bottom: 2rem;
+        min-height: auto;
+    }
+    
+    .blockquote::before {
+        font-size: 5rem;
+    }
+
+    
+}
